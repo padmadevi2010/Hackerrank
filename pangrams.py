@@ -1,18 +1,11 @@
-import string
- 
 def ispangram(str):
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = "abcdefghijklmnopqrstuvwxyz "
     for char in alphabet:
-        if char not in str.lower():
-            return False
- 
-    return True
-     
-# Driver code
-string = input()
-if(ispangram(string) == True):
-    print("Yes")
+        if char in str:
+            return True
+    return False
+a= input().lower()
+if(ispangram(a) == True):
+    print("pangram")
 else:
-    print("No")
-
-    
+    print("not pangram")
